@@ -1,0 +1,91 @@
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+
+body {
+  @extend %calibri-400;
+  font-size: 17px;
+  display: flex;
+  color: $black;
+  flex-direction: column;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+a {
+  text-decoration: none;
+  transition: color 0.2s ease;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+blockquote {
+  margin: 0;
+}
+
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.container--big {
+  max-width: 1780px;
+}
+
+.sr-hide{
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  display: block;
+}
+
+input {
+  outline: none;
+  text-overflow: ellipsis;
+}
+
+%btn{
+  padding: 25px 65px;
+  border: 1px solid transparent;
+  background-color: $brown;
+  color: $white;
+  display: inline-block;
+  transition: all 0.2s ease;
+  @include _hover{
+    border-color: $brown;
+    color: $brown;
+    background-color: transparent;
+  }
+}
