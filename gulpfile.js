@@ -21,7 +21,7 @@ function browsersync() {
 function styles() {
   return src([
     "node_modules/normalize.css/normalize.css",
-    "node_modules/swiper/swiper.min.css",
+    "node_modules/swiper/swiper-bundle.min.css",
     "app/scss/style.scss",
   ])
     .pipe(scss({ outputStyle: "compressed" }))
@@ -49,7 +49,7 @@ function include() {
 
 function scripts() {
   return src([
-    "node_modules/jquery/dist/jquery.js",
+    "node_modules/jquery/dist/jquery.js", 
     "node_modules/swiper/swiper-bundle.min.js",
     "app/js/main.js",
   ])
