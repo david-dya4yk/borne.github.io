@@ -1,0 +1,79 @@
+.services {
+    background-color: $black;
+    padding-bottom: 130px;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    counter-reset: item;
+    margin-bottom: 80px;
+  }
+
+  &__item {
+    background-color: $mineShaft;
+    padding: 100px 80px 35px 70px;
+    color: $alto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    max-width: 423px;
+    width: 100%;
+    margin-top: -140px;
+  }
+
+  &__image {
+    margin-bottom: 44px;
+  }
+
+  &__name {
+    font-size: 36px;
+    line-height: 99%;
+    padding-left: 60px;
+    max-width: 240px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);;
+    margin-bottom: 25px;
+    position: relative;
+   
+    &::before {
+        position: absolute;
+        content: counter(item, decimal-leading-zero); 
+        counter-increment: item;
+        left: 0;
+        top: 0;
+    }
+  }
+
+  &__text{
+    font-size: 20px;
+    color: $silverChalice;
+  }
+
+  &__link{
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    color: $silver;
+    padding: 20px 0;
+    font-size: 15px;
+    @extend %calibri-700;
+    border: 1px solid $silver;
+    width: 183px;
+    margin: 0 auto;
+    line-height: 99.6%;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    @include _hover{
+        background-color: $silver;
+        color: $black;
+    }
+  }
+
+  &__title{
+    font-size: 22px;
+    color: $tundora;
+    @extend %calibri-300;
+    svg{
+        margin-left: 5px;
+    }
+  }
+}
