@@ -64,16 +64,7 @@
     transition: background-color 0.2s ease, color 0.2s ease;
     @include _hover{
         background-color: $silver;
-        color: $black;
-    }
-  }
-
-  &__title{
-    font-size: 22px;
-    color: $tundora;
-    @extend %calibri-300;
-    svg{
-        margin-left: 5px;
+        color: $black; 
     }
   }
 }
