@@ -24,6 +24,7 @@
     "scss": "^0.2.4"
   },
   "dependencies": {
+    "@fancyapps/ui": "^4.0.31",
     "jquery": "^3.6.1",
     "swiper": "^8.4.4"
   }

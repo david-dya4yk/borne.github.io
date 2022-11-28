@@ -49,7 +49,7 @@
             transform: scale(1.5);
         }
     }
-    
+
     img {
       object-fit: cover;
       transition: transform .5s ease;
@@ -84,6 +84,7 @@
     bottom: 40px;
     font-size: 26px;
     line-height: 99.6%;
+    
     span {
       color: $scorpion;
       text-transform: uppercase;

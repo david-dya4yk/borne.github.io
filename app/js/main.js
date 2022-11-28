@@ -10,4 +10,7 @@ $(function(){
         //     delay: 3000,
         //     },
      });
+     Fancybox.bind("[data-fancybox]", {
+      
+    });
 }());
