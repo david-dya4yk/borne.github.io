@@ -22,6 +22,7 @@ function styles() {
   return src([
     "node_modules/normalize.css/normalize.css",
     "node_modules/swiper/swiper-bundle.min.css",
+    "node_modules/@fancyapps/ui/dist/fancybox.css",
     "app/scss/style.scss",
   ])
     .pipe(scss({ outputStyle: "compressed" }))
@@ -51,6 +52,7 @@ function scripts() {
   return src([
     "node_modules/jquery/dist/jquery.js", 
     "node_modules/swiper/swiper-bundle.min.js",
+    "app/js/lib/fancybox.js",
     "app/js/main.js",
   ])
     .pipe(concat("main.min.js"))
