@@ -1,0 +1,63 @@
+.team {
+  padding: 130px 0;
+  overflow: hidden;
+
+  &__inner {
+    display: flex;
+  }
+
+  &__content {
+    margin-right: 30px;
+    position: relative;
+    z-index: 3;
+  }
+
+  &__item {
+    max-width: 425px;
+  }
+
+  &__img {
+    width: 425px;
+    max-width: 100%;
+    height: 475px;
+    margin-bottom: 38px;
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__name {
+    font-size: 32px;
+    line-height: 84%;
+    margin-bottom: 15px;
+  }
+
+  &__subtitle {
+    font-size: 14px;
+    line-height: 84%;
+    color: $doveGray;
+    text-transform: uppercase;
+  }
+
+  &__slider{
+    display: flex;
+  }
+
+  &__item:not(:last-child){
+    margin-right: 50px;
+  }
+}
+.teams{
+  width: 100%;
+  position: relative;
+  &::before{
+    position: absolute;
+    inset: 0;
+    content: "";
+    background-color: $white;
+    transform: translateX(-100%);
+    z-index: 2;
+  }
+}

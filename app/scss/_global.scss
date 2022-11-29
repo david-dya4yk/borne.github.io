@@ -44,7 +44,7 @@ blockquote {
   max-width: 1780px;
 }
 
-.sr-hide{
+.sr-hide {
   position: absolute;
   white-space: nowrap;
   width: 1px;
@@ -77,7 +77,7 @@ input {
   text-overflow: ellipsis;
 }
 
-%btn{
+%btn {
   padding: 25px 65px;
   border: 1px solid transparent;
   background-color: $brown;
@@ -85,40 +85,70 @@ input {
   font-size: 18px;
   display: inline-block;
   transition: all 0.2s ease;
-  @include _hover{
+  @include _hover {
     border-color: $brown;
     color: $brown;
     background-color: transparent;
   }
 }
 
-.link-arrow{
+.link-arrow {
+  position: relative;
   font-size: 22px;
   color: $tundora;
   @extend %calibri-300;
-  svg{
-      margin-left: 5px;
-  }
   transition: text-decoration 0.2s ease;
-  @include _hover{
+  @include _hover {
     text-decoration: underline;
+  }
+  &::before {
+    position: absolute;
+    content: "";
+    background-size: cover;
+    background-image: url("../images/icons/arowtop-right.svg");
+    width: 10px;
+    height: 10px;
+    right: 0;
+    top: 0;
   }
 }
 
-.link-line{
+.test {
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    background-size: cover;
+    background-image: url("../images/icons/arowtop-right.svg");
+    width: 10px;
+    height: 10px;
+    right: 0;
+    top: 0;
+  }
+}
+
+.link-line {
   color: $doveGray;
   font-size: 20px;
   position: relative;
   margin-bottom: 50px;
   display: inline-block;
-  &::after{
-      position: absolute;
-      top: 50%;
-      content: "";
-      width: 63px;
-      height: 1px;
-      background-color: $doveGray;
-      transform: translateY(-50%);
-      margin-left: 17px;
+  &::after {
+    position: absolute;
+    top: 50%;
+    content: "";
+    width: 63px;
+    height: 1px;
+    background-color: $doveGray;
+    transform: translateY(-50%);
+    margin-left: 17px;
   }
+}
+
+.title {
+  font-size: 90px;
+  line-height: 84%;
+  max-width: 535px;
+  margin-bottom: 50px;
+  width: 100%;
 }
