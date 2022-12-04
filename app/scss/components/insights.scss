@@ -1,0 +1,64 @@
+.insights {
+  padding-bottom: 120px;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    display: flex;
+    padding: 50px 0;
+    border-top: 1px solid $silverChalice;
+    column-gap: 80px;
+  }
+
+  &__box {
+    max-width: 350px;
+  }
+
+  &__title {
+    font-size: 36px;
+    line-height: 105%;
+    margin-bottom: 15px;
+  }
+
+  &__link {
+    font-size: 17px;
+    line-height: 160.6%;
+    color: $tundora;
+    position: relative;
+    &::before {
+      position: absolute;
+      content: "";
+      background: no-repeat url("../../images/icons/arrow-top-right.png");
+      width: 12px;
+      height: 12px;
+      top: 3px;
+      left: 90px;
+    }
+  }
+
+  &__text {
+    font-size: 21px;
+    line-height: 135%;
+    color: $tundora;
+    margin-bottom: 15px;
+    @include line-clamp(3);
+  }
+
+  &__time {
+    font-size: 13px;
+    line-height: 160.6%;
+    color: $doveGray;
+    text-transform: uppercase;
+    letter-spacing: 0.26em;
+  }
+
+  &__subtitle {
+    font-size: 122px;
+    padding: 28px 0 9px;
+    border-top: 1px solid $silverChalice;
+    border-bottom: 1px solid $silverChalice;
+  }
+}
