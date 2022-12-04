@@ -12,6 +12,7 @@ body {
   display: flex;
   color: $black;
   flex-direction: column;
+  scroll-behavior: smooth;
 }
 
 .main {
