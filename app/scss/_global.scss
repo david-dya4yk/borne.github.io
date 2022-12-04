@@ -104,28 +104,16 @@ input {
   &::before {
     position: absolute;
     content: "";
-    background-size: cover;
-    background-image: url("../images/icons/arowtop-right.svg");
-    width: 10px;
-    height: 10px;
-    right: 0;
-    top: 0;
+    background-size: contain;
+    background-image: url("../images/icons/arrow-top-right.png");
+    background-repeat: no-repeat;
+    width: 12px;
+    height: 12px;
+    right: -20px;
+    top: 5px;
   }
 }
 
-.test {
-  position: relative;
-  &::before {
-    position: absolute;
-    content: "";
-    background-size: cover;
-    background-image: url("../images/icons/arowtop-right.svg");
-    width: 10px;
-    height: 10px;
-    right: 0;
-    top: 0;
-  }
-}
 
 .link-line {
   color: $doveGray;
