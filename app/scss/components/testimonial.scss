@@ -11,11 +11,6 @@
     width: 100%;
   }
 
-  &__title {
-    font-size: 90px;
-    line-height: 84%;
-  }
-
   &__list {
     display: flex;
     column-gap: 70px;
@@ -114,21 +109,34 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    transition: all .2s ease;
     svg{
         color: $white;
         transform: translateX(4px);
+    }
+
+    @include _hover{
+      width: 80px;
+      height: 80px;
     }
   }
 
   &__link{
     color: $white;
     margin-bottom: 50px;
+    transition: color .2s ease;
     svg{
         margin-left: 10px;
         transform: translateY(4px);
+        color: $white;
+        transition: color .2s ease;
     }
     @include _hover{
         text-decoration: underline;
+        color: $black;
+        svg{
+          color: $black;
+        }
     }
   }
 }

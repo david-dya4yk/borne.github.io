@@ -15,12 +15,7 @@
 
   &__box {
     max-width: 350px;
-  }
-
-  &__title {
-    font-size: 36px;
-    line-height: 105%;
-    margin-bottom: 15px;
+    width: 100%;
   }
 
   &__link {
@@ -36,6 +31,10 @@
       height: 12px;
       top: 3px;
       left: 90px;
+    }
+
+    @include _hover{
+      text-decoration: underline;
     }
   }
 
