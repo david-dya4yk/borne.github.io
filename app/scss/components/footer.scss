@@ -17,7 +17,6 @@
   &__copy {
     font-size: 18px;
     line-height: 154.1%;
- 
   }
 
   &__title {
@@ -33,8 +32,8 @@
     line-height: 137.1%;
     margin-bottom: 40px;
     font-style: normal;
-    transition: color .2s ease;
-    @include _hover{
+    transition: color 0.2s ease;
+    @include _hover {
       color: $doveGray;
     }
   }
@@ -43,8 +42,8 @@
   &__mail {
     @extend %calibri-700;
     font-size: 19px;
-    transition: color .2s ease;
-    @include _hover{
+    transition: color 0.2s ease;
+    @include _hover {
       color: $doveGray;
     }
   }
@@ -52,15 +51,14 @@
   &__graph {
     font-size: 19px;
     line-height: 137.1%;
-   
   }
 
   &__link {
     font-size: 19px;
     line-height: 137.1%;
-    transition: color .2s ease;
+    transition: color 0.2s ease;
 
-    @include _hover{
+    @include _hover {
       color: $doveGray;
     }
   }
@@ -76,8 +74,8 @@
     background-color: transparent;
     cursor: pointer;
     color: $black;
-    transition: color .2s ease;
-    @include _hover{
+    transition: color 0.2s ease;
+    @include _hover {
       color: $doveGray;
     }
   }

@@ -31,6 +31,7 @@
 
   &__name {
     font-size: 36px;
+    // TODO avoid line-height lower than 1 or 100%
     line-height: 99%;
     padding-left: 60px;
     max-width: 240px;
@@ -64,6 +65,7 @@
     border: 1px solid $silver;
     width: 183px;
     margin: 0 auto;
+    // TODO avoid line-height lower than 1 or 100%
     line-height: 99.6%;
     cursor: pointer;
     transition: background-color 0.2s ease, color 0.2s ease;

@@ -15,10 +15,15 @@
 
   &__item {
     max-width: 425px;
-    transition: box-shadow .2s ease;
+    transition: box-shadow 0.2s ease;
 
-    @include _hover{
+    @include _hover {
+      // TODO fix left box-shadow
       box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+      .team__body {
+        padding: 0 0 10px 10px;
+      }
     }
   }
 
@@ -47,18 +52,23 @@
     text-transform: uppercase;
   }
 
-  &__slider{
+  &__body {
+    transition: padding 0.3s ease;
+    padding: 0 0 10px 0;
+  }
+
+  &__slider {
     display: flex;
   }
 
-  &__item:not(:last-child){
+  &__item:not(:last-child) {
     margin-right: 50px;
   }
 }
-.teams{
+.teams {
   width: 100%;
   position: relative;
-  &::before{
+  &::before {
     position: absolute;
     inset: 0;
     content: "";

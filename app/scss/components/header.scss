@@ -7,7 +7,7 @@
     text-transform: uppercase;
   }
 
-  &__logo{
+  &__logo {
     max-width: 243px;
     width: 100%;
   }
@@ -54,7 +54,7 @@
     align-items: center;
     cursor: pointer;
     transition: background-color 0.2s ease;
-    
+
     span {
       width: 5px;
       height: 5px;
@@ -62,8 +62,8 @@
       background-color: $black;
     }
 
-    @include _hover{
-        background-color: $doveGray;
+    @include _hover {
+      background-color: $doveGray;
     }
   }
 }

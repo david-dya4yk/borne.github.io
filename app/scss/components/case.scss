@@ -15,6 +15,7 @@
   &__title {
     max-width: 540px;
     font-size: 90px;
+    // TODO avoid line-height lower than 1 or 100%
     line-height: 84%;
   }
 
@@ -29,48 +30,31 @@
   }
 
   &__inner {
+    // TODO check it
     display: grid;
-    gap: 60px;
-    grid-template-columns: 50%;
-    grid-template-areas:
-      "a b"
-      "c c"
-      "d e";
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 60px;
   }
 
   &__item {
-    max-width: 630px;
     height: 450px;
-    grid-area: a;
     position: relative;
     overflow: hidden;
-    @include _hover{
-        img{
-            transform: scale(1.5);
-        }
+    @include _hover {
+      img {
+        transform: scale(1.5);
+      }
     }
 
     img {
       object-fit: cover;
-      transition: transform .5s ease;
+      transition: transform 0.5s ease;
       width: 100%;
       height: 100%;
     }
 
-    &:nth-child(2) {
-      grid-area: b;
-    }
-
     &:nth-child(3) {
-      height: 560px;
-      max-width: 100%;
-      grid-area: c;
-    }
-    &:nth-child(4) {
-      grid-area: d;
-    }
-    &:nth-child(5) {
-      grid-area: e;
+      grid-column: 1 / span 2;
     }
   }
 
@@ -85,7 +69,7 @@
     font-size: 26px;
     line-height: 99.6%;
     z-index: 2;
-    
+
     span {
       color: $scorpion;
       text-transform: uppercase;

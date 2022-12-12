@@ -60,6 +60,7 @@
   &__inner {
     background: no-repeat url("../../images/content/bg1.jpg");
     background-size: cover;
+    // TODO try to always use only "center" because of different images
     background-position: bottom center;
     height: 818px;
     width: 100%;
@@ -80,12 +81,11 @@
     justify-content: center;
     align-items: flex-end;
     margin-right: 25px;
-  &:nth-child(2){
-    align-items: center;
-    margin-right: 60px; 
+    &:nth-child(2) {
+      align-items: center;
+      margin-right: 60px;
+    }
   }
-}
-
 
   &__info {
     display: flex;
@@ -94,13 +94,14 @@
     margin-bottom: 30px;
     span {
       font-size: 18px;
+      // TODO avoid line-height lower than 1 or 100%
       line-height: 98%;
       padding-left: 10px;
       width: 90px;
     }
   }
 
-  &__img{
+  &__img {
     width: 65px;
     height: 64px;
     background-color: $pirateGold;
@@ -109,35 +110,37 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    transition: all .2s ease;
-    svg{
-        color: $white;
-        transform: translateX(4px);
+    // TODO try to avoid "all" in transition
+    transition: all 0.2s ease;
+    svg {
+      color: $white;
+      transform: translateX(4px);
     }
 
-    @include _hover{
+    @include _hover {
       width: 80px;
       height: 80px;
     }
   }
 
-  &__link{
+  &__link {
     color: $white;
     margin-bottom: 50px;
-    transition: color .2s ease;
-    svg{
-        margin-left: 10px;
-        transform: translateY(4px);
-        color: $white;
-        transition: color .2s ease;
+    transition: color 0.2s ease;
+
+    svg {
+      margin-left: 10px;
+      transform: translateY(4px);
+      color: $white;
+      transition: color 0.2s ease;
     }
-    @include _hover{
-        text-decoration: underline;
+
+    @include _hover {
+      text-decoration: underline;
+      color: $black;
+      svg {
         color: $black;
-        svg{
-          color: $black;
-        }
+      }
     }
   }
 }
-
