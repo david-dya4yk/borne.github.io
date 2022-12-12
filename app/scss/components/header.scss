@@ -1,10 +1,15 @@
 .header {
-  padding-top: 46px;
+  padding: 37px 0;
 
   &__inner {
     display: flex;
     justify-content: space-between;
     text-transform: uppercase;
+  }
+
+  &__logo{
+    max-width: 243px;
+    width: 100%;
   }
 
   &__content {

@@ -18,6 +18,11 @@
     max-width: 423px;
     width: 100%;
     margin-top: -140px;
+    transition: transform .2s ease;
+
+    @include _hover{
+      transform: translateY(-20px);
+    }
   }
 
   &__image {
