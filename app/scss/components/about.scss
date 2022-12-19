@@ -1,5 +1,5 @@
 .about {
-padding: 160px 0 240px;    
+  padding: 160px 0 240px;
   &__inner {
     display: flex;
     justify-content: space-between;
@@ -40,13 +40,14 @@ padding: 160px 0 240px;
   }
 
   &__wrapper {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
   }
 
   &__item {
     width: 33%;
   }
+  
   &__info {
     color: $tundora;
     display: flex;

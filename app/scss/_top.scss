@@ -11,13 +11,26 @@
     flex-direction: column;
     justify-content: center;
     padding-left: 40px;
-    row-gap: 45px;
+    row-gap: 20px;
   }
+
   &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: $doveGray;
-    transition: color 0.2s ease;
+    width: 40px;
+    height: 40px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    transition: color 0.2s ease, border-color 0.2 ease;
+    svg {
+      transform: translateY(2px);
+    }
+
     @include _hover {
       color: $black;
+      border-color: $black;
     }
   }
 }
@@ -25,6 +38,7 @@
 .slider {
   width: 100%;
   max-width: 1400px;
+
   &__inner {
     overflow: hidden;
   }
@@ -32,13 +46,14 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    left: 10%;
+    left: 5%;
     z-index: 1;
   }
+
   &__title {
     font-size: 200px;
     margin-bottom: 10px;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.251); 
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.251);
   }
 
   &__subtitle {
@@ -62,6 +77,7 @@
       height: 100%;
     }
   }
+  
   &__link {
     @extend %btn;
   }

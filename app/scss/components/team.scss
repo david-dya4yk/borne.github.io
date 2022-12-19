@@ -1,79 +1,32 @@
 .team {
   padding: 130px 0;
-  overflow: hidden;
 
   &__inner {
-    display: flex;
+    display: grid;
+    grid-template-columns: 535px 785px;
   }
 
   &__content {
-    margin-right: 30px;
+    padding-right: 30px;
     position: relative;
     z-index: 3;
-    box-shadow: 0 15px 0px 30px #fff;
+    background-color: $white;
+    &::before {
+      position: absolute;
+      content: "";
+      height: 100%;
+      width: 100vh;
+      background-color: $white;
+      left: -100vh;
+    }
   }
 
   &__item {
-    max-width: 425px;
-    transition: box-shadow 0.2s ease;
-
-    @include _hover {
-      // TODO fix left box-shadow
-      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-
-      .team__body {
-        padding: 0 0 10px 10px;
-      }
-    }
-  }
-
-  &__img {
-    width: 425px;
+    width: 425px !important;
     max-width: 100%;
-    height: 475px;
-    margin-bottom: 38px;
-    img {
-      object-fit: cover;
-      width: 100%;
-      height: 100%;
-    }
-  }
-
-  &__name {
-    font-size: 32px;
-    line-height: 84%;
-    margin-bottom: 15px;
-  }
-
-  &__subtitle {
-    font-size: 14px;
-    line-height: 84%;
-    color: $doveGray;
-    text-transform: uppercase;
-  }
-
-  &__body {
-    transition: padding 0.3s ease;
-    padding: 0 0 10px 0;
   }
 
   &__slider {
     display: flex;
-  }
-
-  &__item:not(:last-child) {
-    margin-right: 50px;
-  }
-}
-.teams {
-  width: 100%;
-  position: relative;
-  &::before {
-    position: absolute;
-    inset: 0;
-    content: "";
-    background-color: $white;
-    transform: translateX(-100%);
-    z-index: 2;
   }
 }
