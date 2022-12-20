@@ -1,5 +1,3 @@
-// const { default: Swiper } = require("swiper");
-
 $(
   (function () {
     new Swiper(".swiper", {
@@ -17,13 +15,19 @@ $(
 
     new Swiper(".teams", {
       loop: true,
-      slidesPerView: 'auto',
+      slidesPerView: "auto",
       slidesPerGroup: 1,
       spaceBetween: 50,
       containerModifierClass: "teams-",
       slideClass: "teams-slide",
       wrapperClass: "teams-wrapper",
     });
+
+    $(".header__btn").on("click", function () {
+      $("header").toggleClass("header__menu");
+      // $(this).addClass("header__btn--active");
+    });
+
     Fancybox.bind("[data-fancybox]", {});
   })()
 );
