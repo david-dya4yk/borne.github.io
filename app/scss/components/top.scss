@@ -1,0 +1,16 @@
+.top {
+  padding-top: 175px;
+
+  &__title {
+    font-size: 110px;
+    margin-bottom: 20px;
+    max-width: 400px;
+  }
+
+  &__subtitle {
+    font-size: 34px;
+    line-height: 1.3;
+    color: $tundora;
+    @extend %calibri-300;
+  }
+}

@@ -1,5 +1,12 @@
-.top {
-  &__inner {
+
+
+.slider {
+  &__box {
+    width: 100%;
+    max-width: 1400px;
+  }
+
+  &__list {
     display: flex;
     justify-content: flex-end;
     position: relative;
@@ -33,15 +40,11 @@
       border-color: $black;
     }
   }
-}
-
-.slider {
-  width: 100%;
-  max-width: 1400px;
 
   &__inner {
     overflow: hidden;
   }
+
   &__info {
     position: absolute;
     top: 50%;
@@ -77,8 +80,8 @@
       height: 100%;
     }
   }
-  
-  &__link {
+
+  &__headlink {
     @extend %btn;
   }
 }
