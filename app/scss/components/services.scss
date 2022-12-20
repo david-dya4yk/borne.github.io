@@ -1,11 +1,16 @@
 .services {
-    background-color: $black;
-    padding-bottom: 130px;
+  background-color: $black;
+  padding-bottom: 130px;
+
   &__inner {
     display: flex;
     justify-content: space-between;
     counter-reset: item;
     margin-bottom: 80px;
+  }
+
+  &__image{
+    color: $silverChalice;
   }
 
   &__item {
@@ -18,9 +23,9 @@
     max-width: 423px;
     width: 100%;
     margin-top: -140px;
-    transition: transform .2s ease;
+    transition: transform 0.2s ease;
 
-    @include _hover{
+    @include _hover {
       transform: translateY(-20px);
     }
   }
@@ -31,30 +36,29 @@
 
   &__name {
     font-size: 36px;
-    // TODO avoid line-height lower than 1 or 100%
-    line-height: 99%;
+    line-height: 1;
     padding-left: 60px;
     max-width: 240px;
     padding-bottom: 20px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.15);;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
     margin-bottom: 25px;
     position: relative;
-   
+
     &::before {
-        position: absolute;
-        content: counter(item, decimal-leading-zero); 
-        counter-increment: item;
-        left: 0;
-        top: 0;
+      position: absolute;
+      content: counter(item, decimal-leading-zero);
+      counter-increment: item;
+      left: 0;
+      top: 0;
     }
   }
 
-  &__text{
+  &__text {
     font-size: 20px;
     color: $silverChalice;
   }
 
-  &__link{
+  &__link {
     display: block;
     text-align: center;
     text-transform: uppercase;
@@ -65,13 +69,12 @@
     border: 1px solid $silver;
     width: 183px;
     margin: 0 auto;
-    // TODO avoid line-height lower than 1 or 100%
-    line-height: 99.6%;
+    line-height: 1;
     cursor: pointer;
     transition: background-color 0.2s ease, color 0.2s ease;
-    @include _hover{
-        background-color: $silver;
-        color: $black; 
+    @include _hover {
+      background-color: $silver;
+      color: $black;
     }
   }
 }

@@ -6,6 +6,12 @@
     justify-content: space-between;
   }
 
+  &__title{
+    font-size: 36px;
+    line-height: 1;
+    margin-bottom: 15px;
+  }
+
   &__item {
     display: flex;
     padding: 50px 0;
@@ -26,9 +32,10 @@
     &::before {
       position: absolute;
       content: "";
-      background: no-repeat url("../../images/icons/arrow-top-right.png");
+      background: no-repeat url("../../images/icons/arrow-top-right.svg");
       width: 12px;
       height: 12px;
+      background-size: cover;
       top: 3px;
       left: 90px;
     }

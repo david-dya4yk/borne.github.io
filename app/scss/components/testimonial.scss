@@ -1,4 +1,5 @@
 .testimonial {
+  // box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   &__wrapper {
     display: flex;
     justify-content: flex-end;
@@ -19,6 +20,18 @@
   &__item {
     max-width: 455px;
     width: 100%;
+    position: relative;
+    padding-top: 90px;
+
+    &::before{
+      position: absolute;
+      content: "";
+      background: no-repeat  url('../../images/icons/blockquote.svg');
+      width: 67px;
+      height: 54px;
+      top: 0;
+      left: 0;
+    }
   }
 
   &__picture {
@@ -60,8 +73,7 @@
   &__inner {
     background: no-repeat url("../../images/content/bg1.jpg");
     background-size: cover;
-    // TODO try to always use only "center" because of different images
-    background-position: bottom center;
+    background-position: center;
     height: 818px;
     width: 100%;
     display: flex;
@@ -94,8 +106,7 @@
     margin-bottom: 30px;
     span {
       font-size: 18px;
-      // TODO avoid line-height lower than 1 or 100%
-      line-height: 98%;
+      line-height: 1;
       padding-left: 10px;
       width: 90px;
     }
@@ -110,8 +121,7 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    // TODO try to avoid "all" in transition
-    transition: all 0.2s ease;
+    transition: width 0.2s ease, height 0.2s ease;
     svg {
       color: $white;
       transform: translateX(4px);
@@ -127,6 +137,7 @@
     color: $white;
     margin-bottom: 50px;
     transition: color 0.2s ease;
+    position: relative;
 
     svg {
       margin-left: 10px;
@@ -135,11 +146,20 @@
       transition: color 0.2s ease;
     }
 
+    &::after {
+      position: absolute;
+      content: "";
+      left: 0;
+      bottom: -3px;
+      width: 0;
+      height: 1px;
+      background-color: $white;
+      transition: width 0.2s ease;
+    }
+
     @include _hover {
-      text-decoration: underline;
-      color: $black;
-      svg {
-        color: $black;
+      &::after {
+        width: 100%;
       }
     }
   }
