@@ -10,6 +10,7 @@ body {
   @extend %calibri-400;
   font-size: 17px;
   display: flex;
+  font-style: normal;
   color: $black;
   line-height: 1;
   flex-direction: column;
@@ -27,6 +28,7 @@ a {
   text-decoration: none;
   transition: color 0.2s ease;
   color: inherit;
+  font: inherit;
 }
 
 ul {
