@@ -29,13 +29,16 @@
   }
 
   &__inner {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 60px;
+    margin-bottom: 90px;
   }
 
   &__item {
-    height: 450px;
+    max-width: calc(50% - 30px);
+    width: 100%;
     position: relative;
     overflow: hidden;
     transition: scale 0.2s ease;
@@ -43,20 +46,23 @@
       img {
         transform: scale(1.25);
       }
-      .case__wrapper{
+      .case__wrapper {
         opacity: 1;
       }
     }
 
+    &:nth-child(3) {
+      max-width: 100%;
+    }
+  }
+
+  &__image {
+    height: 450px;
     img {
       object-fit: cover;
       transition: transform 0.5s ease;
       width: 100%;
       height: 100%;
-    }
-
-    &:nth-child(3) {
-      grid-column: 1 / span 2;
     }
   }
 
@@ -80,5 +86,81 @@
       display: inline-block;
       font-size: 14px;
     }
+  }
+
+  &__filter {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-right: 40px;
+    text-transform: uppercase;
+    @extend %calibri-300;
+  }
+
+  &__content {
+    display: flex;
+
+    margin-bottom: 40px;
+  }
+
+  &__btn {
+    border: none;
+    font-size: 20px;
+    line-height: 1.5;
+    background-color: transparent;
+    color: $tundora;
+    padding-left: 26px;
+    cursor: pointer;
+    transition: color 0.2s ease;
+
+    &.mixitup-control-active {
+      color: $black;
+    }
+
+    @include _hover{
+      color: $black;
+    }
+  }
+
+  &__icon {
+    display: inline;
+    position: relative;
+
+    &:first-child {
+      text-transform: uppercase;
+    }
+
+    &:not(:first-child)::before {
+      position: absolute;
+      transform: translateY(50%);
+      content: "/";
+      left: 0;
+      color: $tundora;
+    }
+  }
+
+  &__more {
+    background-color: $outerSpace;
+    width: 182px;
+    height: 60px;
+    display: inline-block;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $white;
+    svg {
+      margin-right: 17px;
+      transition: transform 0.5s ease;
+    }
+
+    @include _hover {
+      svg {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+
+  &__butons {
+    display: flex;
   }
 }

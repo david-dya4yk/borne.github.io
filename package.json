@@ -26,6 +26,8 @@
   "dependencies": {
     "@fancyapps/ui": "^4.0.31",
     "jquery": "^3.6.1",
-    "swiper": "^8.4.4"
+    "swiper": "^8.4.4",
+    "mixitup": "^3.3.1"
+
   }
 }
