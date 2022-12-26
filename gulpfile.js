@@ -52,6 +52,7 @@ function scripts() {
   return src([
     "node_modules/jquery/dist/jquery.js", 
     "node_modules/swiper/swiper-bundle.min.js",
+    "node_modules/mixitup/dist/mixitup.min.js",
     "app/js/lib/fancybox.js",
     "app/js/main.js",
   ])

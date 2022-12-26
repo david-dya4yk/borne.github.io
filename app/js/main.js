@@ -23,10 +23,12 @@ $(
       wrapperClass: "teams-wrapper",
     });
 
-    $(".header__btn").on("click", function () {
-      $("header").toggleClass("header__menu");
-      // $(this).addClass("header__btn--active");
-    });
+    //  $(".case__btn").on("click", function () {
+    //     $("case__btn").toggleClass("case__btn--active");
+    //     $(this).toggleClass("header__btn--active");
+    //  });
+
+    var mixer = mixitup('.case__inner');
 
     Fancybox.bind("[data-fancybox]", {});
   })()
