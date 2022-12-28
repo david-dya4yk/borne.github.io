@@ -33,15 +33,38 @@
   &__icon {
     width: 25%;
     font-size: 20px;
+    @extend %calibri-700;
+    color: $tundora;
+
+    span,
+    time{
+      display: block;
+      @extend %calibri-400;
+    font-size: 16px;
+
+    }
   }
 
   &__link {
-    color: $tundora;
     font-size: 16px;
+    @extend %calibri-400;
+    transition: color 0.2s ease;
+
+    @include _hover{
+      color: $pirateGold;
+    }
   }
 
-  &__tag {
-    @extend %calibri-700;
+  &__link:not(:last-child){
+    position: relative;
+    margin-right: 5px;
+    &::before{
+      position: absolute;
+      content: ",";
+      bottom: -2px;
+      right: -5px;
+      color: $black;
+    }
   }
 
   &__title {
