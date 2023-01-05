@@ -1,5 +1,6 @@
 .team {
   padding: 65px 0;
+  overflow: hidden;
 
   &__inner {
     display: grid;
@@ -8,16 +9,11 @@
 
   &__content {
     padding-right: 30px;
-    position: relative;
     z-index: 3;
     background-color: $white;
     &::before {
-      position: absolute;
-      content: "";
-      height: 100%;
-      width: 100vh;
-      background-color: $white;
-      left: -100vh;
+      left: -100%;
+      transform: translateY(-50%);
     }
   }
 
@@ -28,5 +24,33 @@
 
   &__slider {
     display: flex;
+  }
+
+  &__title {
+    p {
+      position: relative;
+    }
+
+    &::before {
+      inset: 0;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 0;
+    }
+  }
+
+  &__content,
+  &__title {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 104%;
+      width: 104%;
+      background-color: $white;
+      top: 50%;
+    }
   }
 }

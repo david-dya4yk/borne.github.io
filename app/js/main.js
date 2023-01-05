@@ -15,7 +15,7 @@ $(
 
     new Swiper(".teams", {
       loop: true,
-      slidesPerView: "auto",
+      slidesPerView: 'auto',
       slidesPerGroup: 1,
       spaceBetween: 50,
       containerModifierClass: "teams-",
@@ -23,12 +23,10 @@ $(
       wrapperClass: "teams-wrapper",
     });
 
-    //  $(".case__btn").on("click", function () {
-    //     $("case__btn").toggleClass("case__btn--active");
-    //     $(this).toggleClass("header__btn--active");
-    //  });
-
-    var mixer = mixitup('.case__inner');
+    // $(".post__item").on("click", function () {
+    //   $("post__item").toggleClass("post__item");
+    //   $(this).addClass("post__item--active");
+    // });
 
     Fancybox.bind("[data-fancybox]", {});
   })()
