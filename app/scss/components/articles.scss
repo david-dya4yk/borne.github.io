@@ -24,3 +24,107 @@
     text-transform: uppercase;
   }
 }
+
+.post {
+
+  &__image {
+    max-width: 872px;
+    height: 529px;
+    margin-bottom: 40px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__list {
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 1.2;
+    position: relative;
+    &::before {
+      position: absolute;
+      content: "";
+      height: 2px;
+      width: 4px;
+      background-color: $tundora;
+      left: 25px;
+      top: 9px;
+    }
+    a {
+      color: $tundora;
+      padding-left: 15px;
+
+      &:not(:last-child) {
+        margin-right: 20px;
+        position: relative;
+
+        &::before {
+          position: absolute;
+          content: "";
+          width: 2px;
+          height: 9px;
+          background-color: $tundora;
+          top: 4px;
+          right: -20px;
+        }
+      }
+    }
+  }
+
+  &__title {
+    font-size: 45px;
+    line-height: 1.2;
+    margin-bottom: 29px;
+  }
+
+  &__link {
+    text-transform: uppercase;
+    position: relative;
+    font-size: 12px;
+    line-height: 15px;
+    color: $tundora;
+    padding-right: 30px;
+    margin-bottom: 100px;
+    display: inline-block;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+    }
+
+    &::before {
+      background-image: url("../../images/icons/rmarrow.svg");
+      width: 20px;
+      height: 10px;
+      right: 0;
+      top: 0;
+    }
+
+    &::after {
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 1px;
+      background-color: $black;
+      transition: width 0.2s ease;
+    }
+
+    @include _hover {
+      color: $black;
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+
+  &__text {
+    font-size: 19px;
+    color: $tundora;
+    margin-bottom: 35px;
+    line-height: 1.2;
+  }
+}
