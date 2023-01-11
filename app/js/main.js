@@ -23,7 +23,7 @@ $(
       wrapperClass: "teams-wrapper",
     });
 
-    // $(".post__item").on("click", function () {
+    // $(".post__item").on("click", function () {˛
     //   $("post__item").toggleClass("post__item");
     //   $(this).addClass("post__item--active");
     // });
