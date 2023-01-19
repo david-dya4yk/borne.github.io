@@ -26,7 +26,6 @@
 }
 
 .post {
-
   &__image {
     max-width: 872px;
     height: 529px;
@@ -126,5 +125,92 @@
     color: $tundora;
     margin-bottom: 35px;
     line-height: 1.2;
+  }
+}
+
+.blockquote {
+  display: none;
+  padding: 69px 88px 69px 188px;
+  background-color: $mineShaft;
+  color: $white;
+  position: relative;
+  margin-bottom: 100px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    background-image: url("../../images/icons/blockquote.svg");
+    width: 67px;
+    height: 54px;
+    top: 70px;
+    left: 80px;
+  }
+
+  &--active {
+    display: block;
+  }
+
+  &__text {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  &__cite {
+    font-size: 12px;
+    color: $alto;
+    font-style: normal;
+  }
+}
+
+.page {
+  &__pagination {
+    background-color: $mineShaft;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 101px;
+    padding: 0 48px;
+    position: relative;
+    &--entry{
+      margin-bottom: 120px;
+    }
+    &::before {
+      position: absolute;
+      content: "";
+      background-image: url("../../images/icons/pagination.svg");
+      width: 16px;
+      height: 16px;
+      left: 50%;
+      right: 50%;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__arrow {
+    color: $white;
+    width: 138px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 1px;
+      background-color: $white;
+      transition: width 0.2s ease;
+    }
+
+    @include _hover {
+      color: $white;
+      &::before {
+        width: 100%;
+      }
+    }
   }
 }

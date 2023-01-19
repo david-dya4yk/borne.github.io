@@ -1,5 +1,5 @@
 @@include('./components/header.html') @@include('./components/top.html',
-{"title": "Portfolio portfolio."})
+{"title": "Portfolio single."})
 <section class="portfolio">
   <div class="container container--s">
     <div class="portfolio__img">
@@ -61,25 +61,7 @@ Client:<span>Wilium Jhon</span>
           peacefully between its four familiar around
         </p>
       </div>
-      <div class="portfolio__pagination">
-        <a class="portfolio__arrow" href="#">
-          <svg width="28" height="10" viewBox="0 0 28 10">
-            <path
-              fill="currentColor"
-              d="M28 4.11801H4.48105V0.518799L0 5.00003L4.48105 9.48108V5.88193H28V4.11801Z"/>
-          </svg>
-          Prev project
-        </a>
-        <a class="portfolio__arrow" href="#">
-            Next project
-            <svg width="28" height="9" viewBox="0 0 28 9">
-            <path
-              fill="currentColor"
-              d="M-3.14653e-07 5.36319L23.5189 5.36319L23.5189 8.9624L28 4.48117L23.5189 0.000117694L23.5189 3.59927L-4.6886e-07 3.59928L-3.14653e-07 5.36319Z"
-            />
-          </svg>
-        </a>
-      </div>
+     @@include("./components/page-pagination.html")
     </div>
   </div>
 </section>

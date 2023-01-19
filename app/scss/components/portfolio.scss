@@ -37,11 +37,10 @@
     color: $tundora;
 
     span,
-    time{
+    time {
       display: block;
       @extend %calibri-400;
-    font-size: 16px;
-
+      font-size: 16px;
     }
   }
 
@@ -50,15 +49,15 @@
     @extend %calibri-400;
     transition: color 0.2s ease;
 
-    @include _hover{
+    @include _hover {
       color: $pirateGold;
     }
   }
 
-  &__link:not(:last-child){
+  &__link:not(:last-child) {
     position: relative;
     margin-right: 5px;
-    &::before{
+    &::before {
       position: absolute;
       content: ",";
       bottom: -2px;
@@ -72,58 +71,7 @@
     margin-bottom: 10px;
   }
 
-  &__pagination{
-    background-color: $mineShaft;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 101px;
-    padding: 0 48px;
-    position: relative;
-
-    &::before{
-        position: absolute;
-        content: "";
-        background-image: url('../../images/icons/pagination.svg');
-        width: 16px;
-        height: 16px;
-        left: 50%;
-        right: 50%;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-  }
-
-  &__wrapper{
+  &__wrapper {
     padding-left: 100px;
   }
-
-  &__arrow{
-    color: $white;
-    width: 138px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-
-    &::before{
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 0;
-        height: 1px;
-        background-color: $white;
-        transition: width 0.2s ease;
-    }
-
-    @include _hover{
-        color: $white;
-        &::before {
-          width: 100%;
-        }
-      }
-    }
-
-  }
-
+}
