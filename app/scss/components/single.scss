@@ -1,9 +1,11 @@
 .single {
-  line-height: 1.4;
+  padding: 65px 0;
 
-  &__img {
-    max-width: 100%;
-    height: 599px;
+  &__image {
+    display: inline-block;
+    max-width: 144px;
+    height: 181px;
+ 
     img {
       width: 100%;
       height: 100%;
@@ -11,119 +13,174 @@
     }
   }
 
-  &__box {
-    padding: 70px 100px 35px;
+  &__img {
+    display: inline-block;
+    width: 590px;
+    height: 704px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 
-  &__text {
-    font-size: 20px;
-    color: $tundora;
-    margin-bottom: 30px;
+  &__inner {
+    display: grid;
+    grid-template-columns: 760px 500px;
+    column-gap: 45px;
+    margin-bottom: 100px;
   }
 
-  &__list {
+  &__wrapper {
+    width: 760px;
     display: flex;
-    justify-content: space-around;
-    border-top: 1px solid $black;
-    border-bottom: 1px solid $black;
-    padding: 35px 13px 44px 100px;
-    margin-bottom: 70px;
   }
 
-  &__icon {
-    width: 25%;
-    font-size: 20px;
-    @extend %calibri-700;
+  &__content {
+    padding-top: 100px;
+    max-width: 500px;
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    margin-right: 25px;
+    row-gap: 25px;
+  }
+
+  &__title {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+
+  &__price {
+    font-size: 28px;
     color: $tundora;
-
-    span,
-    time{
-      display: block;
-      @extend %calibri-400;
-    font-size: 16px;
-
-    }
+    margin-bottom: 15px;
   }
 
-  &__link {
-    font-size: 16px;
-    @extend %calibri-400;
-    transition: color 0.2s ease;
-
-    @include _hover{
-      color: $pirateGold;
-    }
-  }
-
-  &__link:not(:last-child){
-    position: relative;
-    margin-right: 5px;
-    &::before{
-      position: absolute;
-      content: ",";
-      bottom: -2px;
-      right: -5px;
+  &__reviev {
+    font-size: 18px;
+    color: $tundora;
+    margin-bottom: 25px;
+    svg {
       color: $black;
     }
   }
 
-  &__title {
-    font-size: 36px;
-    margin-bottom: 10px;
+  &__text {
+    font-size: 19px;
+    color: $tundora;
+    margin-bottom: 50px;
   }
 
-  &__pagination{
-    background-color: $mineShaft;
+  &__counter {
+    border: 1px solid $black;
+    width: 109px;
+    height: 55px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    height: 101px;
-    padding: 0 48px;
-    position: relative;
+    justify-content: center;
+    margin-right: 33px;
+  }
 
-    &::before{
-        position: absolute;
-        content: "";
-        background-image: url('../../images/icons/pagination.svg');
-        width: 16px;
-        height: 16px;
-        left: 50%;
-        right: 50%;
-        top: 50%;
-        transform: translateY(-50%);
+  &__num {
+    width: 32px;
+    font-size: 19px;
+    height: 20px;
+    text-align: center;
+  }
+
+  &__plus {
+    padding: 15px 25px 15px 0;
+  }
+
+  &__minus {
+    padding: 15px 0 15px 25px;
+  }
+
+  &__minus,
+  &__plus,
+  &__num {
+    border: none;
+    background-color: $white;
+  }
+
+  &__cart {
+    display: flex;
+    margin-bottom: 55px;
+  }
+
+  &__btn {
+    padding: 0 48px;
+    color: $white;
+    background-color: $black;
+    border: 1px solid $black;
+    text-transform: uppercase;
+    transition: color 0.2s ease, background-color 0.2s ease;
+    @include _hover {
+      background-color: $white;
+      color: $black;
     }
   }
 
-  &__wrapper{
-    padding-left: 100px;
+  &__icon {
+    font-size: 18px;
+    @extend %calibri-700;
+    span {
+      color: $doveGray;
+      padding-left: 10px;
+      @extend %calibri-400;
+    }
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.tabs {
+  max-width: 950px;
+  margin: 0 auto;
+  &__item {
+    display: none;
+    line-height: 1.8;
+    padding-top: 35px;
+    padding: 35px 5px 0;
+    min-height: 130px;
+    &.tabs__item--active {
+      display: block;
+    }
   }
 
-  &__arrow{
-    color: $white;
-    width: 138px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
+  &__top {
+    border-bottom: 1px solid $mercury;
+  }
 
-    &::before{
-        content: "";
+  &__link {
+    padding: 0 45px 25px;
+    font-size: 19px;
+    display: inline-block;
+    position: relative;
+    margin-bottom: -1px;
+    &--active {
+      border-bottom: 1px solid $black;
+    }
+
+    &::after{
         position: absolute;
+        content: "";
         left: 0;
-        bottom: 0;
+        bottom: -1px;
         width: 0;
         height: 1px;
-        background-color: $white;
+        background-color: $black;
         transition: width 0.2s ease;
     }
-
     @include _hover{
-        color: $white;
-        &::before {
-          width: 100%;
-        }
-      }
+
+        &::after {
+            width: 100%;
+          }
     }
-
   }
-
+}
