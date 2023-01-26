@@ -6,29 +6,29 @@ $tundora: #404040;
 $mineShaft: #252525;
 $alto: #dedede;
 $silverChalice: #adadad;
-$silver: #C8C8C8;
+$silver: #c8c8c8;
 $doveGray: #636363;
 $scorpion: #626161;
 $silverChalice: #aeaeae;
 $white: #fff;
 $pirateGold: #a67c00;
-$outerSpace: #262C2C;
+$outerSpace: #262c2c;
 $alto: #d7d7d7;
 $mercury: #e4e4e4;
 $gray: #878787;
 $bounder: #797979;
 
-%calibri-400{
+%calibri-400 {
   font-family: "Calibri-Regular", sans-serif;
   font-weight: 400;
 }
 
-%calibri-300{
+%calibri-300 {
   font-family: "Calibri-Light", sans-serif;
   font-weight: 300;
 }
 
-%calibri-700{
+%calibri-700 {
   font-family: "Calibri-Bold", sans-serif;
   font-weight: 700;
 }
@@ -46,8 +46,8 @@ $bounder: #797979;
   }
 }
 
-@mixin _432 {
-  @media (max-width: 432px) {
+@mixin _400 {
+  @media (max-width: 400px) {
     @content;
   }
 }
@@ -88,8 +88,8 @@ $bounder: #797979;
   }
 }
 
-@mixin _1450 {
-  @media (max-width: 1450px) {
+@mixin _1350 {
+  @media (max-width: 1350px) {
     @content;
   }
 }
@@ -100,10 +100,22 @@ $bounder: #797979;
   }
 }
 
+@mixin _1920 {
+  @media (min-width: 1920px) {
+    @content;
+  }
+}
+
 @mixin _hover {
   @media (any-hover: hover) {
     &:hover {
       @content;
     }
+  }
+}
+
+@mixin _landscape {
+  @media (orientation: landscape) {
+    @content;
   }
 }

@@ -1,15 +1,26 @@
 .case {
   padding: 65px 0;
 
+  @include _700 {
+    padding: 30px 0;
+  }
+
   &__list {
     display: flex;
     justify-content: space-between;
     column-gap: 30px;
     margin-bottom: 35px;
+
+    @include _700 {
+      flex-wrap: wrap;
+    }
   }
 
   &__box {
     max-width: 680px;
+    @include _700 {
+      max-width: 100%;
+    }
   }
 
   &__title {
@@ -24,7 +35,10 @@
     p {
       color: $tundora;
       font-size: 21px;
-      line-height: 140%;
+    }
+
+    @include _700 {
+      padding-top: 0;
     }
   }
 
@@ -33,7 +47,10 @@
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 60px;
-    margin-bottom: 90px;
+
+    @include _700 {
+      gap: 20px;
+    }
   }
 
   &__item {
@@ -54,6 +71,10 @@
     &:nth-child(3) {
       max-width: 100%;
     }
+
+    @include _700 {
+      max-width: calc(50% - 10px);
+    }
   }
 
   &__image {
@@ -63,6 +84,14 @@
       transition: transform 0.5s ease;
       width: 100%;
       height: 100%;
+    }
+
+    @include _700 {
+      height: 300px;
+    }
+
+    @include _500 {
+      height: 200px;
     }
   }
 
@@ -98,7 +127,6 @@
 
   &__content {
     display: flex;
-
     margin-bottom: 40px;
   }
 
@@ -116,7 +144,7 @@
       color: $black;
     }
 
-    @include _hover{
+    @include _hover {
       color: $black;
     }
   }
@@ -148,6 +176,7 @@
     justify-content: center;
     align-items: center;
     color: $white;
+    
     svg {
       margin-right: 17px;
       transition: transform 0.5s ease;

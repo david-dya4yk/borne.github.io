@@ -1,5 +1,11 @@
 $(
   (function () {
+    console.log(123)
+    $(".header__btn").on("click", function () {
+      $(".header__content").toggleClass("header__content--active");
+      $("body").toggleClass("body__hidden");
+    });
+
     new Swiper(".swiper", {
       direction: "vertical",
       loop: true,
@@ -14,13 +20,28 @@ $(
     });
 
     new Swiper(".teams", {
-      loop: true,
+      loop: false,
       slidesPerView: 'auto',
       slidesPerGroup: 1,
       spaceBetween: 50,
-      containerModifierClass: "teams-",
+      containerModifierClass: "teams",
       slideClass: "teams-slide",
       wrapperClass: "teams-wrapper",
+
+      breakpoints: {
+        300:{
+          slidesPerView: 2,
+          spaceBetween: 10,
+        },
+        600:{
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+        1320: {
+          slidesPerView: 2,
+          spaceBetween: 50,
+        }
+      }
     });
 
     (function quantityProducts() {
@@ -51,11 +72,10 @@ $(
       $($(this).attr("href")).addClass("tabs__item--active");
     });
 
-    // $(".post__item").on("click", function () {˛
-    //   $("post__item").toggleClass("post__item");
-    //   $(this).addClass("post__item--active");
-    // });
+  
+
+
 
     Fancybox.bind("[data-fancybox]", {});
-  })()
+  })() 
 );

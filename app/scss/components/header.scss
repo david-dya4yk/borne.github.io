@@ -1,15 +1,31 @@
 .header {
   padding: 37px 0;
+  background-color: $white;
 
-  &__inner {
-    display: flex;
-    justify-content: space-between;
-    text-transform: uppercase;
+  @include _600 {
+    padding: 20px 0;
   }
 
-  &__logo {
-    max-width: 192px;
-    width: 100%;
+  &__inner {
+    display: grid;
+    grid-template-columns: 210px 1fr 210px;
+    align-items: center;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 2;
+
+    @include _1000 {
+      grid-template-columns: 100px 1fr 205px;
+    }
+
+    @include _900 {
+      grid-template-columns: 100px 1fr 45px;
+      justify-items: flex-end;
+    }
+
+    @include _320 {
+      grid-template-columns: 100px 1fr;
+    }
   }
 
   &__content {
@@ -18,6 +34,47 @@
     width: 100%;
     justify-content: center;
     align-items: center;
+
+    @include _900 {
+      transform: translateY(-200%);
+      z-index: -1;
+      background-color: $white;
+      transition: all 1s ease;
+      position: absolute;
+      width: calc(100% + 30px);
+      flex-direction: column;
+      top: 50%;
+      font-size: 30px;
+      row-gap: 30px;
+      height: calc(100vh - 119px);
+      left: -15px;
+
+      @include _landscape {
+        padding-top: 200px;
+      }
+    }
+
+    @include _600 {
+      height: calc(100vh - 50px);
+    }
+
+    &--active {
+      transform: translateY(58px);
+      overflow: scroll;
+
+      @include _600 {
+        transform: translateY(35px);
+      }
+
+      .header__item {
+        text-align: center;
+        width: 100%;
+
+        a {
+          display: block;
+        }
+      }
+    }
   }
 
   &__item {
@@ -25,11 +82,11 @@
     transition: color 0.2s ease;
     position: relative;
 
-    @include _hover{
+    @include _hover {
       color: $black;
-      &::after{
-        width: 100%;
 
+      &::after {
+        width: 100%;
       }
     }
 
@@ -46,18 +103,43 @@
   }
 
   &__links {
-    max-width: 205px;
+    text-align: end;
+
+    @include _900 {
+      margin-right: 55px;
+    }
+
+    @include _600 {
+      margin-right: 15px;
+    }
+
+    @include _400 {
+      margin-right: 5px;
+    }
+
+    @include _320 {
+      display: none;
+    }
   }
 
   &__link {
     transition: text-decoration 0.2s ease;
     font-size: 15px;
-    display: inline-block;
+    letter-spacing: 0.21em;
+    display: block;
     transition: color 0.2s ease;
-    @include _hover{
+
+    @include _hover {
       color: $doveGray;
     }
-  
+
+    @include _600 {
+      font-size: 12px;
+    }
+
+    @include _400 {
+      font-size: 10px;
+    }
   }
 
   &__btn {
@@ -67,49 +149,50 @@
     border-radius: 50%;
     border: 1px solid $black;
     background-color: transparent;
-    display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
-    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease ;
     display: none;
 
+    @include _900 {
+      display: flex;
+    }
+
     span {
+      display: inline-block;
       width: 5px;
       height: 5px;
       border-radius: 50%;
       background-color: $black;
       position: relative;
+
+      @include _600 {
+        width: 4px;
+        height: 4px;
+      }
+
       &::after,
-      &::before{
+      &::before {
         width: 5px;
         position: absolute;
+
         content: "";
         height: 5px;
         border-radius: 50%;
         background-color: $black;
+
+        @include _600 {
+          width: 4px;
+          height: 4px;
+        }
       }
 
-      &::after{
+      &::after {
         left: 8px;
-
       }
 
-      &::before{
+      &::before {
         left: -8px;
       }
     }
-
-    @include _hover {
-      background-color: $silverChalice;
-      border-color: $silverChalice;
-      span{
-        background-color: $white;
-        &::before,
-        &::after{
-          background-color: $white;
-        }
-      }
-    }
-  } 
+  }
 }

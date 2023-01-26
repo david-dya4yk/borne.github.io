@@ -1,10 +1,20 @@
 .team {
   padding: 65px 0;
   overflow: hidden;
+  max-width: 1940px;
+  margin: 0 auto;
 
   &__inner {
     display: grid;
     grid-template-columns: 535px 785px;
+
+    @include _1200 {
+      grid-template-columns: 350px 100%;
+    }
+
+    @include _1000 {
+      display: unset;
+    }
   }
 
   &__content {
@@ -18,8 +28,9 @@
   }
 
   &__item {
-    width: 425px !important;
-    max-width: 100%;
+    @include _1920 {
+      width: 425px !important;
+    }
   }
 
   &__slider {
