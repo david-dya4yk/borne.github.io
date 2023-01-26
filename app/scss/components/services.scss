@@ -2,15 +2,38 @@
   background-color: $black;
   padding-bottom: 130px;
 
+  @include _700 {
+    padding-bottom: 60px;
+  }
+
   &__inner {
     display: flex;
     justify-content: space-between;
     counter-reset: item;
     margin-bottom: 80px;
+
+    @include _1350 {
+      column-gap: 10px;
+    }
+
+    @include _1000 {
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      gap: 40px;
+    }
+
+    @include _700 {
+      margin-bottom: 40px;
+    }
   }
 
-  &__image{
+  &__image {
     color: $silverChalice;
+    margin-bottom: 44px;
+
+    @include _1000 {
+      margin-bottom: 10px;
+    }
   }
 
   &__item {
@@ -25,13 +48,33 @@
     margin-top: -140px;
     transition: transform 0.2s ease;
 
+    &:not(:last-child) {
+      @include _1000 {
+        margin-top: -140px;
+      }
+
+      @include _700 {
+        margin-top: 0;
+      }
+    }
+
     @include _hover {
       transform: translateY(-20px);
     }
-  }
 
-  &__image {
-    margin-bottom: 44px;
+    @include _1350 {
+      padding: 45px 20px 26px 52px;
+    }
+
+    @include _1000 {
+      margin-top: 0;
+      width: 315px;
+    }
+    &:first-child {
+      @include _700 {
+        margin-top: -140px;
+      }
+    }
   }
 
   &__name {
@@ -51,11 +94,23 @@
       left: 0;
       top: 0;
     }
+
+    @include _900 {
+      font-size: 30px;
+    }
+
+    @include _600 {
+      font-size: 25px;
+    }
   }
 
   &__text {
     font-size: 20px;
     color: $silverChalice;
+
+    @include _700 {
+      font-size: 16px;
+    }
   }
 
   &__link {
@@ -72,6 +127,7 @@
     line-height: 1;
     cursor: pointer;
     transition: background-color 0.2s ease, color 0.2s ease;
+
     @include _hover {
       background-color: $silver;
       color: $black;

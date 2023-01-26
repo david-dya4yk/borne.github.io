@@ -1,15 +1,28 @@
 .insights {
-  padding-bottom: 120px;
+  padding: 60px 0;
 
   &__inner {
     display: flex;
     justify-content: space-between;
+
+    @include _1000 {
+      display: unset;
+    }
   }
 
-  &__title{
+  &__content {
+    @include _1000 {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__title {
     font-size: 36px;
-    line-height: 1;
     margin-bottom: 15px;
+
+    @include _700 {
+      font-size: 26px;
+    }
   }
 
   &__item {
@@ -17,6 +30,10 @@
     padding: 50px 0;
     border-top: 1px solid $silverChalice;
     column-gap: 80px;
+
+    @include _700 {
+      column-gap: 15px;
+    }
   }
 
   &__box {
@@ -26,9 +43,9 @@
 
   &__link {
     font-size: 17px;
-    line-height: 160.6%;
     color: $tundora;
     position: relative;
+
     &::before {
       position: absolute;
       content: "";
@@ -40,26 +57,27 @@
       left: 90px;
     }
 
-    @include _hover{
+    @include _hover {
       text-decoration: underline;
     }
   }
 
   &__text {
     font-size: 21px;
-    line-height: 135%;
     color: $tundora;
     margin-bottom: 15px;
     @include line-clamp(3);
+
+    @include _700 {
+      font-size: 17px;
+      @include line-clamp(6);
+    }
   }
 
   &__time {
     font-size: 13px;
-    line-height: 160.6%;
     color: $doveGray;
     text-transform: uppercase;
     letter-spacing: 0.26em;
   }
-
-
 }

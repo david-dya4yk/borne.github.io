@@ -1,12 +1,27 @@
 .about {
   padding: 160px 0 240px;
+
+  @include _1000 {
+    padding: 60px 0 200px;
+  }
+
   &__inner {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    @include _1000 {
+      grid-template-columns: 1fr;
+      row-gap: 30px;
+    }
   }
 
   &__box {
     max-width: 650px;
+    width: 100%;
+
+    @include _1000 {
+      max-width: 100%;
+    }
   }
 
   &__name {
@@ -14,6 +29,7 @@
     position: relative;
     margin-bottom: 45px;
     color: $doveGray;
+
     &::after {
       position: absolute;
       content: "";
@@ -28,15 +44,31 @@
 
   &__subtitle {
     font-size: 50px;
-    line-height: 102%;
+    line-height: 1;
     margin-bottom: 40px;
+
+    @include _1200 {
+      font-size: 35px;
+      margin-bottom: 20px;
+    }
+
+    @include _500 {
+      font-size: 25px;
+    }
   }
 
   &__text {
     font-size: 19px;
-    line-height: 140%;
     color: $tundora;
     margin-bottom: 55px;
+
+    @include _1200 {
+      margin-bottom: 20px;
+    }
+
+    @include _500 {
+      font-size: 15px;
+    }
   }
 
   &__wrapper {
@@ -45,9 +77,9 @@
   }
 
   &__item {
-    width: 33%;
+    width: 100%;
   }
-  
+
   &__info {
     color: $tundora;
     display: flex;
@@ -59,6 +91,16 @@
       font-size: 18px;
       display: inline-block;
       padding-left: 15px;
+    }
+
+    @include _700 {
+      font-size: 60px;
+    }
+
+    @include _500 {
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
     }
   }
 }
