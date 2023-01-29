@@ -208,7 +208,11 @@
       left: 50%;
       right: 50%;
       top: 50%;
-      transform: translateY(-50%);
+      transform: translate3d(-50%, -50%, 0);
+    }
+
+    @include _500{
+      padding: 0 15px;
     }
   }
 
@@ -236,6 +240,10 @@
       &::before {
         width: 100%;
       }
+    }
+
+    @include _500{
+      width: 115px;
     }
   }
 }
