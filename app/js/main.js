@@ -77,5 +77,6 @@ $(
 
 
     Fancybox.bind("[data-fancybox]", {});
+    var mixer = mixitup('.case');
   })() 
 );
