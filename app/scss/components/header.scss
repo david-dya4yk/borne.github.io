@@ -1,6 +1,8 @@
 .header {
   padding: 37px 0;
   background-color: $white;
+  position: relative;
+  z-index: 15;
 
   @include _600 {
     padding: 20px 0;
@@ -11,7 +13,6 @@
     grid-template-columns: 210px 1fr 210px;
     align-items: center;
     text-transform: uppercase;
-    position: relative;
     z-index: 2;
 
     @include _1000 {
@@ -36,34 +37,33 @@
     align-items: center;
 
     @include _900 {
-      transform: translateY(-200%);
-      z-index: -1;
+      transform: translateY(-250%);
       background-color: $white;
       transition: all 1s ease;
       position: absolute;
-      width: calc(100% + 30px);
+      z-index: 11;
       flex-direction: column;
-      top: 50%;
       font-size: 30px;
       row-gap: 30px;
       height: calc(100vh - 119px);
-      left: -15px;
+      inset: 50% 0 0;
+
 
       @include _landscape {
-        padding-top: 200px;
+        padding-top: 125px;
       }
     }
 
     @include _600 {
-      height: calc(100vh - 50px);
+      height: calc(100vh - 85px);
     }
 
     &--active {
-      transform: translateY(58px);
+      transform: translateY(calc(119px / 2));
       overflow: scroll;
 
       @include _600 {
-        transform: translateY(35px);
+        transform: translateY(calc(85px / 2));
       }
 
       .header__item {

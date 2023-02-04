@@ -1,10 +1,32 @@
 $(
   (function () {
-    console.log(123)
+    // При открытии меню сделать проверку:
+    // 1. Если сайдбар открыт - закрыть его
+    // 2. Открыть меню
+
+    // При открытии сайдбара сделать проверку:
+    // 1. Если меню открыто - закрыть его
+    // 2. Открыть сайдбар
     $(".header__btn").on("click", function () {
       $(".header__content").toggleClass("header__content--active");
       $("body").toggleClass("body__hidden");
+      if($(".aside").hasClass("aside--active")){
+        $(".aside").toggleClass("aside--active");
+        $(".posts__btn").hasClass("posts__btn--active");
+        $(".posts__btn").toggleClass("posts__btn--active");
+
+      };
     });
+
+    $(".posts__btn").on("click", function () {
+      $(".aside").toggleClass("aside--active");
+      $(".posts__btn").toggleClass("posts__btn--active");
+      $("body").toggleClass("body__hidden");
+      if($(".header__content").hasClass("header__content--active")){
+        $(".header__content").toggleClass("header__content--active");
+      };
+    });
+
 
     new Swiper(".swiper", {
       direction: "vertical",
@@ -71,6 +93,7 @@ $(
       $(".tabs__item").removeClass("tabs__item--active");
       $($(this).attr("href")).addClass("tabs__item--active");
     });
+  
 
   
 
