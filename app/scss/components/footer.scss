@@ -3,6 +3,10 @@
   color: $tundora;
   position: relative;
 
+  @include _600{
+    padding: 30px 0;
+  }
+
   @include _400{
     padding: 30px 0;
   }
