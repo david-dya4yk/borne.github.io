@@ -1,9 +1,22 @@
 .contact {
   padding: 65px 0;
 
+  @include _600{
+    padding: 30px 0;
+  }
+
   &__item {
     color: $tundora;
     font-style: normal;
+    &:nth-child(1){
+      grid-area: a;
+    }
+    &:nth-child(2){
+      grid-area: b;
+    }
+    &:nth-child(3){
+      grid-area: c;
+    }
   }
 
   &__inner {
@@ -11,17 +24,41 @@
     grid-template-columns: 520px 300px 300px;
     column-gap: 85px;
     margin-bottom: 140px;
+    @include _1350{
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas: 
+      "a a"
+      "b c";
+      margin-bottom: 50px;
+      column-gap: 30px;
+    }
+
+    @include _500{
+      display: block;
+    }
   }
 
   &__title {
     font-size: 80px;
+
+    @include _800{
+      font-size: 50px;
+    }
+
+    @include _600{
+      font-size: 36px;
+    }
   }
 
   &__text {
-    line-height: 1.3;
     font-size: 18px;
     margin-bottom: 25px;
     padding-top: 45px;
+    max-width: 300px;
+
+    @include _500{
+      max-width: 100%;
+    }
   }
 
   &__link {
@@ -57,10 +94,28 @@
     display: grid;
     grid-template-columns: 650px 1fr;
     column-gap: 60px;
+
+    @include _1200{
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 30px;
+    }
+
+    @include _600{
+      grid-template-columns: 1fr;
+      row-gap: 40px;
+    }
   }
 
   &__map {
     height: 644px;
+
+    @include _1000{
+      height: 400px;
+    }
+
+    @include _800{
+      height: 300px;
+    }
   }
 
   &__top {
