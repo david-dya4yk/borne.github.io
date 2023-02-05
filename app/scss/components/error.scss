@@ -2,9 +2,12 @@
   padding: 65px 0;
   text-align: center;
 
+  @include _800{
+    padding: 30px 0;
+  }
+
   &__title {
     font-size: 40px;
-    line-height: 1;
     @extend %calibri-400;
     margin-bottom: 30px;
     color: $tundora;
@@ -13,6 +16,14 @@
       @extend %calibri-700;
       color: $black;
       font-size: 288px;
+
+      @include _600{
+        font-size: 150px;
+      }
+    }
+
+    @include _600{
+      font-size: 30px;
     }
   }
 
